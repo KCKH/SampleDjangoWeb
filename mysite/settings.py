@@ -31,6 +31,14 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    # a below line to add poll in project then run command
+    # python manage.py makemigrations polls
+    # so your databases schema will be created
+    # next time you run check migration using command
+    # python manage.py sqlmigrate polls 0001; 0001 is name you can
+    # find on migrations > 0001_initial.py
+
+    'polls.apps.PollsConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
