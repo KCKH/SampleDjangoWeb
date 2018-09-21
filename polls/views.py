@@ -2,10 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 
 def index(request):
-    # return HttpResponse("Welcome to my page")
-    latest_question_list = Question.objects.order_by('-pub_date')[:5]
-    output = ', '.join([q.question_text for q in latest_question_list])
-    return HttpResponse(output)
+    return HttpResponse("Welcome to my page")
     # Leave the rest of the views (detail, results, vote) unchanged
 
 def detail(request, question_id):
